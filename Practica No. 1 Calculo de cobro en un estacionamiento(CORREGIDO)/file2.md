@@ -1,0 +1,66 @@
+﻿# Documentación del proyecto
+
+Nombre del proyecto: Práctica No. 1: Cálculo de cobro en un estacionamiento con el codigo corregido
+
+Elaborado por: Yuliana Martina Ramos
+
+Fecha de elaboración: 11 / 10 / 2026
+
+---
+
+### Objetivo del proyecto
+
+Crear un programa de consola en C# que automatize el cobro de vehiculos de un estacionamiento, calculando el tiempo de permanencia y el costo total de cobrarle al vehiculo 
+
+---
+
+### Objetivos del proyecto
+
+1. Aprender a calcular el tiempo de permanencia y el costo total a pagar por el usuario, considerando las tarifas establecidas
+2. Poder aplicar las reglas de cobro dependiendo de las horas de permanencia del vehículo en el estacionamiento 
+3. Saber como evitar errores de entrada de datos por parte del usuario, como ingresar letras o caracteres especiales en lugar de números.
+4. hacer un bucle  while para que el usuario pueda volver a ingresar los horarios correctos si se equivoca, y tambien para que pueda registrar otro vehiculo sin tener que reiniciar el programa.
+
+---
+
+### Características del proyecto
+
+- Tipo de proyecto: **Aplicación de consola**
+- Versión de Visual Studio: **2026**
+- Versión de C#: **.NET 10.0**
+
+---
+
+### Descripción del proyecto
+
+EL sistema se presenta al usuario con un mensaje de bienvenida y le solicita que ingrese el horario de entrada y salida del vehiculo del estacionamiento
+y el sistema empieza a calcula el costo total a pagar por el usuario, considerando que:
+
+ La primera hora cuesta $30.  
+ Cada hora adicional cuesta $20.  
+Si el vehículo permanece más de 8 horas, se aplica una tarifa fija de $180 por todo el día.  
+Si el tiempo fue menor a 1 hora, se cobra como 1 hora completa. 
+
+si el usuario ingresa un horario de salida menor al de entrada, se le mostrara un mensaje de error y se le dara la oportunidad de volver a ingresar los horarios correctos,
+
+y al final se le mostrara el total a pagar por el usuario, y se le dara la opcion de continuar o salir, si quiere continuar tiene que apretar la tecla "ENTER" y el programa se reiniciara, si no quiere tendra que escribir "salir" y el programa se cerrara.
+
+
+---
+
+### Notas del proyecto
+
+Ahora le puse un bucle while 
+
+ya que si el usuario ingresaba un horario de salida menor al de entrada, o si te mostraba el total, el programa se cerraba y no le daba la oportunidad de volver a ingresar los horarios correctos o volver a resgistrar otro vehiculo,
+ahora el programa le dara la oportunidad de volver a ingresar los horarios correctos hasta que lo haga correctamente. 
+
+y tambien ahora el programa no te dejara escribir numeros negativos, signos como el "+" o caracteres especiales ,no te dejara poner 0, y no te dejara poner numeros mayores a 24, 
+
+ASCII: Es una forma de dibujar con caracteres, en este caso se utilizo para dibujar un carro y un reloj, para que el usuario se sienta mas comodo al ver el programa y se vea mas bonito, y tambien se utilizo para dibujar una linea de separacion entre los mensajes del programa.
+
+Formula de horas extras: (horaSalida - horaEntrada) - 1: Esta fórmula calcula las horas adicionales que el vehículo ha permanecido en el estacionamiento, restando la primera hora ya cobrada
+
+Environment.Exit(0): Sirve para finalizar el programa de manera inmediata, sin importar en qué parte del código se encuentre
+
+Continue: Sirve para saltar a la siguiente iteración del bucle, en este caso se utiliza para reiniciar el programa y permitir al usuario ingresar nuevos horarios de entrada y salida, y evitar errores de logica
